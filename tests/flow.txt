@@ -1,19 +1,21 @@
-# Przygotowanie umowy klienta
+# Prepare deal agreement
 
-;; Komentarze są pomijane
-;; Użyj ! by oznaczyć istotny krok
-;; Użyj ? by oznaczyć opcjonalny krok
+;; Comments starts with double semicolon and spans until end of line
+;; Each step is composed out of:
+;; <Numer index>. [level] <step text>
+;; <Description>
+;; Level can be either:
+;;  ! - required
+;;  ? - optional
+;;    - empty for normal
 
-1. Otwórz umowę
-2. Sprawdź datę w umowie
-3.! Sprawdź osobę podpisującą
-4.! Sprawdź numer EZD w umowie
-5.? Sprawdź adres firmy
-6. Sprawdź certyfikat FSC
-7. Sprawdź czy wprowadzono harmonogram
-8. Sprawdź, czy wygenerowano RODO
-9. Wygeneruj PDF 
-10. Załącz do sprawy
-11. Sprawdź, czy załączono właściwy plik
-12. Zmień nazwę, by pasowała do wzoru
-13. Wyślij do podpisu
+1. Open agreement
+2. Check if date is correct
+3. ! Check and correct person in agreement paper head
+4. ! Verify address of person making paper 
+5. ? Clean formatting of deal, spacing 
+6. Generate sales agreement 
+7. ! Verify if you generated correct file
+8. Make e-mail for your boss 
+9. Check if you added correct file into email
+10. ! Send email
