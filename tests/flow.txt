@@ -1,0 +1,19 @@
+# Przygotowanie umowy klienta
+
+;; Komentarze są pomijane
+;; Użyj ! by oznaczyć istotny krok
+;; Użyj ? by oznaczyć opcjonalny krok
+
+1. Otwórz umowę
+2. Sprawdź datę w umowie
+3.! Sprawdź osobę podpisującą
+4.! Sprawdź numer EZD w umowie
+5.? Sprawdź adres firmy
+6. Sprawdź certyfikat FSC
+7. Sprawdź czy wprowadzono harmonogram
+8. Sprawdź, czy wygenerowano RODO
+9. Wygeneruj PDF 
+10. Załącz do sprawy
+11. Sprawdź, czy załączono właściwy plik
+12. Zmień nazwę, by pasowała do wzoru
+13. Wyślij do podpisu
