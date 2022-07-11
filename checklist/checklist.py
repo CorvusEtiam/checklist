@@ -11,7 +11,6 @@ import re
 import sys 
 from typing import List
 
-
 FLOW_ITEM_START = re.compile(r"^(?P<index>\d+)\.\s*(?P<level>[\!\?]?)\s*(?P<step>.*)", re.MULTILINE)
 TITLE_ITEM_START = re.compile(r"^# \.", re.MULTILINE)
 
@@ -219,7 +218,3 @@ def cli():
             sys.exit(0)
 
     start_tui(state)
-
-if __name__ == "__main__":
-    logging.basicConfig(filename="debug.log", format="[%(levelname)s] %(message)s -- %(asctime)s")
-    cli()
