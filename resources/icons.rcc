@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix="icons">
+    <file alias="optional">optional.png</file>
+    <file alias="required">required.png</file>
+</qresource>
+</RCC>
