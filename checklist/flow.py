@@ -36,6 +36,11 @@ class LevelInfo(Enum):
         elif self == LevelInfo.Required:
             return "Wymagany"
 
+class ProgressInfo(Enum):
+    Waiting = 0
+    Active  = 1
+    Finished = 2
+
 class ChecklistLoadingError(Exception):
     """
     ChecklistLoadingError
@@ -46,6 +51,7 @@ class Step:
         self.label = label 
         self.description = description or label 
         self.level = level 
+        self.state = ProgressInfo.Waiting
 
     def __str__(self):
         return f"Step(label={self.label!r}, level={self.level.value})"
@@ -80,11 +86,11 @@ class Checklist:
         return cls(title = dct["title"], steps = [ Step.from_dict(s) for s in dct["steps"] ], filename = Path(dct["filename"]))
 
     @classmethod
-    def from_file(cls, file: Path) -> 'Checklist':
+    def from_file(cls, filepath: Path | str) -> 'Checklist':
         flow = []
         title = None
-        first_line = True
-        
+        first_line = True 
+        file = Path(filepath)
         prev_step: Step = None
         with file.open("r", encoding="utf-8") as fi:
             for index, line in enumerate(fi, 1):
@@ -120,6 +126,7 @@ class Checklist:
 
         if prev_step != None:
             flow.append(prev_step)
+        flow[0].state = ProgressInfo.Active
         return cls(title = title, steps = flow, filename = file)
 
 class State:
